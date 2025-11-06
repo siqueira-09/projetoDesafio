@@ -1,0 +1,123 @@
+
+:root {
+  --verde-parana: #007f3d;
+  --azul-parana: #005aa7;
+  --branco: #ffffff;
+  --cinza-fundo: #f2f5f4;
+  --cinza-texto: #2e2e2e;
+  --sombra-suave: rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--cinza-fundo);
+  color: var(--cinza-texto);
+  line-height: 1.6;
+  padding-bottom: 60px;
+}
+
+header {
+  background: linear-gradient(90deg, var(--verde-parana), var(--azul-parana));
+  color: var(--branco);
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px var(--sombra-suave);
+}
+
+h1 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: var(--azul-parana);
+  margin: 40px 20px 20px;
+  border-left: 8px solid var(--verde-parana);
+  padding-left: 15px;
+  font-size: 1.9em;
+}
+
+p {
+  padding: 0 20px;
+  font-size: 1.15em;
+  margin-bottom: 20px;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  list-style: none;
+}
+
+li {
+  background-color: var(--branco);
+  border-left: 6px solid var(--verde-parana);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px var(--sombra-suave);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px var(--sombra-suave);
+}
+
+img {
+  display: block;
+  margin: 15px auto;
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 12px var(--sombra-suave);
+}
+
+a {
+  color: var(--verde-parana);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--azul-parana);
+  text-decoration: underline;
+}
+
+footer {
+  background-color: var(--verde-parana);
+  color: var(--branco);
+  text-align: center;
+  padding: 25px;
+  font-size: 1em;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 10px var(--sombra-suave);
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  p, li {
+    font-size: 1em;
+  }
+
+  ul {
+    grid-template-columns: 1fr;
+  }
+}
